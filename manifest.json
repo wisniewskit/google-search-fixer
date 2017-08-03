@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_addonName__",
+  "default_locale": "en_US",
+  "description": "__MSG_addonDescription__",
+  "author": "__MSG_addonAuthorsList__",
+  "version": "1.0",
+  "homepage_url": "http://github.com/wisniewskit/google-search-fixer",
+  "applications": {
+    "gecko": {
+      "id": "@googlesearchfixer",
+      "strict_min_version": "45.0"
+    }
+  },
+  "icons": {
+    "16": "icons/google_fixed.svg",
+    "32": "icons/google_fixed.svg",
+    "48": "icons/google_fixed.svg",
+    "96": "icons/google_fixed.svg"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [{
+    "js": ["content.js"],
+    "run_at": "document_start",
+    "matches": ["*://*/*"],
+    "include_globs": ["*://www.google.*/*"]
+  }]
+}
