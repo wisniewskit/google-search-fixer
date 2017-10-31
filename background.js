@@ -4,14 +4,6 @@
 
 // Override the user-agent HTTP headers sent to Google Search
 
-const GoogleSearchTLDs = /^https?:\/\/www\.google\..*/;
-
-const ChromePhoneUA = "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Mobile Safari/537.36";
-const ChromeTabletUA = "Mozilla/5.0 (Linux; Android 4.3; Nexus 7 Build/JSS15Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36";
-
-const IsPhone = navigator.userAgent.includes("Mobile");
-const TargetUA = IsPhone ? ChromePhoneUA : ChromeTabletUA;
-
 function rewriteUserAgentForGoogleSearchTLDs(e) {
   if (e.url.match(GoogleSearchTLDs)) {
     for (let header of e.requestHeaders) {

@@ -25,11 +25,11 @@
   ],
   "background": {
     "scripts": [
-      "background.js"
+      "common.js", "background.js"
     ]
   },
   "content_scripts": [{
-    "js": ["content.js"],
+    "js": ["common.js", "content.js"],
     "run_at": "document_start",
     "matches": ["*://*/*"],
     "include_globs": ["*://www.google.*/*"]

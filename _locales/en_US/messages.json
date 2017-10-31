@@ -3,7 +3,7 @@
     "message": "Google Search Fixer"
   },
   "addonDescription": {
-    "message": "Override the user-agent string presented to Google Search pages to receive the search UX shown to Chrome."
+    "message": "Override the user-agent string presented to Google Search pages to receive the search experience shown to Chrome."
   },
   "addonAuthorsList": {
     "message": "Thomas Wisniewski <twisniewski@mozilla.com>"
