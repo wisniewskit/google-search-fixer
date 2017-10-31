@@ -4,12 +4,12 @@
   "default_locale": "en_US",
   "description": "__MSG_addonDescription__",
   "author": "__MSG_addonAuthorsList__",
-  "version": "1.0",
+  "version": "1.0.1",
   "homepage_url": "http://github.com/wisniewskit/google-search-fixer",
   "applications": {
     "gecko": {
-      "id": "@googlesearchfixer",
-      "strict_min_version": "45.0"
+      "id": "{8883bfb7-9856-40a6-907c-bd5717c05146}",
+      "strict_min_version": "56.0"
     }
   },
   "icons": {
