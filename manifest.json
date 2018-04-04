@@ -4,7 +4,7 @@
   "default_locale": "en_US",
   "description": "__MSG_addonDescription__",
   "author": "__MSG_addonAuthorsList__",
-  "version": "1.1",
+  "version": "1.2",
   "homepage_url": "http://github.com/wisniewskit/google-search-fixer",
   "applications": {
     "gecko": {
@@ -31,6 +31,6 @@
     "js": ["common.js", "content.js"],
     "run_at": "document_start",
     "matches": ["*://*/*"],
-    "include_globs": ["*://(encrypted|www).google.*/*"]
+    "include_globs": ["*://(encrypted|www|maps).google.*/*"]
   }]
 }
