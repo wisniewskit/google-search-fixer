@@ -20,18 +20,3 @@ browser.webRequest.onBeforeSendHeaders.addListener(
   {"urls": ["*://*/*"]},
   ["blocking", "requestHeaders"]
 );
-
-// Block the Google serviceworker, because it is currently using non-standard
-// methods which break in standards-compliant browsers.
-
-function blockGoogleServiceWorker(e) {
-  if (e.url.match(GoogleSearchTLDs) && e.url.indexOf("/serviceworker") != -1) {
-    return {cancel: true};
-  }
-}
-
-browser.webRequest.onBeforeRequest.addListener(
-  blockGoogleServiceWorker,
-  {"urls": ["*://*/*"]},
-  ["blocking"]
-);

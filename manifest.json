@@ -4,7 +4,7 @@
   "default_locale": "en_US",
   "description": "__MSG_addonDescription__",
   "author": "__MSG_addonAuthorsList__",
-  "version": "1.3",
+  "version": "1.4",
   "homepage_url": "http://github.com/wisniewskit/google-search-fixer",
   "applications": {
     "gecko": {
