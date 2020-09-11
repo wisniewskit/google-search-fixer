@@ -4,6 +4,11 @@
 
 // Override the user-agent HTTP headers sent to Google Search
 
+// Keep in sync with include_globs in manifest.json
+const GoogleSearchTLDs = /^https?:\/\/(www|maps)\.google\./;
+
+const GoogleMatchPatterns = browser.runtime.getManifest().content_scripts[0].matches;
+
 function rewriteUserAgentForGoogleSearchTLDs(e) {
   if (e.url.match(GoogleSearchTLDs)) {
     for (let header of e.requestHeaders) {
@@ -17,7 +22,7 @@ function rewriteUserAgentForGoogleSearchTLDs(e) {
 
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentForGoogleSearchTLDs,
-  {"urls": ["*://*/*"]},
+  {urls: GoogleMatchPatterns},
   ["blocking", "requestHeaders"]
 );
 
@@ -31,6 +36,6 @@ function blockGoogleServiceWorker(e) {
 
 browser.webRequest.onBeforeRequest.addListener(
   blockGoogleServiceWorker,
-  {"urls": ["*://*/*"]},
+  {urls: GoogleMatchPatterns},
   ["blocking"]
 );

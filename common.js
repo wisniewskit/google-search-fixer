@@ -1,5 +1,3 @@
-const GoogleSearchTLDs = /^https?:\/\/(www|encrypted|maps)\.google\..*/;
-
 const RunningFirefoxVersion = (navigator.userAgent.match(/Firefox\/([0-9.]+)/) || ["", "58.0"])[1];
 const RunningAndroidVersion = navigator.userAgent.match(/Android\/[0-9.]+/) || "Android 6.0";
 
