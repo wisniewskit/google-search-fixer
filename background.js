@@ -29,13 +29,17 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 // Block the Google serviceworker, because it is currently causing strange issues.
 
 function blockGoogleServiceWorker(e) {
-  if (e.url.match(GoogleSearchTLDs) && e.url.indexOf("/serviceworker") != -1) {
+  if (e.url.match(GoogleSearchTLDs)) {
     return {cancel: true};
   }
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   blockGoogleServiceWorker,
-  {urls: GoogleMatchPatterns},
+  {
+    // Replace "/*" path prefix in match pattern with "/serviceworker*".
+    urls: GoogleMatchPatterns.map(s => s.replace("/*", "/serviceworker*")),
+    types: ["script"],
+  },
   ["blocking"]
 );
