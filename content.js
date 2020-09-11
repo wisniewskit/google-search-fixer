@@ -4,9 +4,16 @@
 
 // Override the navigator.userAgent value Google Search sees
 
-window.wrappedJSObject.eval(`(function() {
-  Object.defineProperty(navigator, "userAgent", {
-    get: () => ${JSON.stringify(TargetUA)},
-    configurable: true
-  });
-}());`);
+
+Object.defineProperty(
+  navigator.wrappedJSObject,
+  "userAgent",
+  {
+    enumerable: true,
+    configurable: true,
+    // This property descriptor is a value-property rather than a getter function,
+    // to avoid the error "TypeError: can't access dead object" when the content
+    // accesses navigator.userAgent after the extension is unloaded.
+    value: TargetUA,
+  }
+);
