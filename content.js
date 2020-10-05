@@ -14,6 +14,6 @@ Object.defineProperty(
     // This property descriptor is a value-property rather than a getter function,
     // to avoid the error "TypeError: can't access dead object" when the content
     // accesses navigator.userAgent after the extension is unloaded.
-    value: TargetUA,
+    value: getUserAgentOverride(navigator.userAgent),
   }
 );

@@ -13,7 +13,7 @@ function rewriteUserAgentForGoogleSearchTLDs(e) {
   if (e.url.match(GoogleSearchTLDs)) {
     for (let header of e.requestHeaders) {
       if (header.name.toLowerCase() === "user-agent") {
-        header.value = TargetUA;
+        header.value = getUserAgentOverride(header.value);
       }
     }
     return {requestHeaders: e.requestHeaders};
