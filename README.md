@@ -1,5 +1,5 @@
 <p align="center">
-<img src="icon.png" alt="Google Search Fixer" width="100">
+<img src="icons/google_fixed.svg" alt="Google Search Fixer" width="100">
 </p>
 <h1 align="center">Google Search Fixer</h1>
 <h6 align="center">Override the user-agent string presented to Google Search pages to receive the
