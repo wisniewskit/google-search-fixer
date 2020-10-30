@@ -27,7 +27,7 @@ Please note that using this addon will make your browser appear to Google to be 
 https://addons.mozilla.org/android/addon/google-search-fixer/
 
 
-### Note
+## Note
 
 Android users seeing "unavailable on your platform", go to https://addons.mozilla.org/en-US/android/addon/google-search-fixer/
 
