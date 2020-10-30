@@ -19,13 +19,9 @@ adds a rider to that information which should hopefully make it clear to those p
 
 Please note that using this addon will make your browser appear to Google to be an "LG Nexus" device, regardless of the actual make and model number of your device. As such it will appear that way on your Google "recently used devices" listings (https://myaccount.google.com/device-activity).
 
-
-
-
 ## Download <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_128x128.png" width="36"/>
 
 https://addons.mozilla.org/android/addon/google-search-fixer/
-
 
 ## Note
 
@@ -33,4 +29,3 @@ Android users seeing "unavailable on your platform", go to https://addons.mozill
 
 ## Licence
 Mozilla Public License, version 2.0
-
